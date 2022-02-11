@@ -1,7 +1,8 @@
 const fs = require('fs');
+const content = ' poner esto'
 
 
-fs.appendFile('new-file.txt','Data to append','utf-8',(err) =>{
+fs.appendFile('new-file.txt',content,'utf-8',(err) =>{
     if(err){
         console.log('error en append')
         return
