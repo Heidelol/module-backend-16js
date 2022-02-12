@@ -9,37 +9,50 @@ const fs = require('fs');
 //     }
 // })
 
-const directoryToDelete = 'newDirectory'
+// const directoryToDelete = 'newDirectory'
 
-function rmdir(pathToDelete){
-    fs.readdir(pathToDelete, (err, filesAndDirectories) =>{
-        if(err){
-            console.error('Error: ', error)
-            return
-        }
+// function rmdir(pathToDelete){
+//     fs.readdir(pathToDelete, (err, filesAndDirectories) =>{
+//         if(err){
+//             console.error('Error: ', error)
+//             return
+//         }
 
-        console.log(filesAndDirectories)
+//         console.log(filesAndDirectories)
 
-        filesAndDirectories.forEach((file, index) => {
-            console.log(file)
-            const newPathFIle = `${pathToDelete}/${file}`
-            fs.unlink(newPathFIle, (err) => {
-                console.error('Error: ', err)
-                return
-            })
-            console.log('se borro el archivo: ', file)
-            //validar que sea el ultimo elemento que se borro
-            if(index === filesAndDirectories.length - 1){
-                fs.rmdir(pathToDelete, (err) => {
-                    if(err){
-                        console.error('Error: ', err)
-                        return
-                    }
-                    console.log('Se borro el directorio')
-                })
-            }
-        })
+//         filesAndDirectories.forEach((file, index) => {
+//             console.log(file)
+//             const newPathFIle = `${pathToDelete}/${file}`
+//             fs.unlink(newPathFIle, (err) => {
+//                 console.error('Error: ', err)
+//                 return
+//             })
+//             console.log('se borro el archivo: ', file)
+//             //validar que sea el ultimo elemento que se borro
+//             if(index === filesAndDirectories.length - 1){
+//                 fs.rmdir(pathToDelete, (err) => {
+//                     if(err){
+//                         console.error('Error: ', err)
+//                         return
+//                     }
+//                     console.log('Se borro el directorio')
+//                 })
+//             }
+//         })
+//     })
+// }
+
+// rmdir(directoryToDelete)
+
+//function rmdir sync
+
+function rmdirSync(pathToDelete){
+    const files = fs.readdirSync(pathToDelete)
+    files.forEach((file) => {
+        const newPathFile = `${pathToDelete}/${file}`
+        fs.unlinkSync(newPathFile)
     })
+    fs.rmdirSync(pathToDelete)
 }
 
-rmdir(directoryToDelete)
+
