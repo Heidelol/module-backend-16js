@@ -5,5 +5,5 @@ fs.unlink('new-file.txt',(err) => {
         console.log('se quedo el archivo')
         return
     }
-    console.log('se logro borrar el archivo')
+    console.log('se logro borrar el')
 })
