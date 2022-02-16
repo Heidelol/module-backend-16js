@@ -71,20 +71,20 @@ const muro = {
 // }
 
 
-// construir(muro, (error,muroConstruido) => {
-//     if(error){
-//         console.log('Error: ',error)
-//         return
-//     }
-//     // ya tengo muro construido
-//     console.log('Muro construido: ', muroConstruido)
-//     aplanar(muroConstruido,(errorAplanar, muroAplanado) =>{
-//         console.log('muroAplanado: ',muroAplanado)
-//         pintar(muroAplanado,(errorPintar, muroPintado) =>{
-//             console.log('MuroPintado: ', muroPintado)
-//         })
-//     })
-// })
+construir(muro, (error,muroConstruido) => {
+    if(error){
+        console.log('Error: ',error)
+        return
+    }
+    // ya tengo muro construido
+    console.log('Muro construido: ', muroConstruido)
+    aplanar(muroConstruido,(errorAplanar, muroAplanado) =>{
+        console.log('muroAplanado: ',muroAplanado)
+        pintar(muroAplanado,(errorPintar, muroPintado) =>{
+            console.log('MuroPintado: ', muroPintado)
+        })
+    })
+})
 
 /*
 Proceso inscripcion a Kodemia
