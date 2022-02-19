@@ -18,17 +18,8 @@ server.use(express.json()) // recibir json en nuestro request
 // })
 
 server.get('/koders',(request, response) => {
-    var fs = require('fs')  
-    var obj = {};
+   
   
-    fs.readFile('koders.json', function (err, data) {
-          var json = JSON.parse(data)
-          json.push();
-  
-          fs.writeFile("koders.json", JSON.stringify(json))
-   });
-
-    
     response.json({
         message: 'oki'
     })
