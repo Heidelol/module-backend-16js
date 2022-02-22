@@ -2,38 +2,48 @@
   "koders": [
     {
       "id": 1,
-      "name": "Jessica",
-      "gender": "f"
+      "name": "Jess",
+      "gender": "f",
+      "generation": 16
     },
     {
       "id": 2,
       "name": "Vhryan",
-      "gender": "m"
+      "gender": "m",
+      "generation": 16
     },
     {
       "id": 3,
       "name": "Paco",
-      "gender": "m"
+      "gender": "m",
+      "generation": 16
     },
     {
       "id": 4,
       "name": "Aldhair",
-      "gender": "m"
+      "gender": "m",
+      "generation": 16
     },
     {
       "id": 5,
       "name": "Hector",
-      "gender": "m"
+      "gender": "m",
+      "generation": 16
     },
     {
       "id": 6,
       "name": "Heidel",
-      "gender": "m"
+      "gender": "m",
+      "generation": 16
     },
     {
       "id": 7,
       "name": "Erick",
-      "gender": "m"
-    }
+      "gender": "m",
+      "generation": 16
+    },
+    {},
+    {},
+    {}
   ]
 }
