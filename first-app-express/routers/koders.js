@@ -124,6 +124,27 @@ router.get('/koders/:id',async (request, response) => {
     })
 })
 
+router.get('/', async(request, response) => {
+    console.log('query params: ', request.query)
+    const count = request.query.count
+    const name = request.query.name
+    const gender = request.query.gender
+
+    console.log('count: ', count)
+    const json = await getKoders
+
+    let kodersData = json.koders
+
+    if(count){
+        kodersData = kodersData.slice(0,parseInt)
+    }
+
+    if(name){
+        kodersData = kodersData.filter((koder) => koder.name === koders.name)
+    }
+    
+})
+
 router.delete('/koders/:id',async (request, response) =>{
     const idKoder = request.params.id
 
